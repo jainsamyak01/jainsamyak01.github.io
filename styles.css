@@ -48,13 +48,16 @@ footer {
     bottom: 0;
 }
 
+.about {
+    margin-bottom: 2rem; /* Adjust spacing between sections */
+}
+
 .about p {
-    margin-bottom: 1.5rem; /* Adjust as needed */
+    background-color: #f0f0f0; /* Light background color */
     border: 1px solid #ccc; /* Border style */
     padding: 1rem; /* Padding inside the rectangle */
     border-radius: 8px; /* Rounded corners for a softer look */
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    transform: translateZ(0); /* Ensure 3D transforms are hardware accelerated */
 }
 
 .about h1,
@@ -63,10 +66,11 @@ footer {
 .about h4,
 .about h5,
 .about h6 {
+    background-color: #f0f0f0; /* Light background color */
     border: 1px solid #ccc; /* Border style */
     padding: 0.5rem 1rem; /* Padding inside the rectangle */
     border-radius: 8px; /* Rounded corners for a softer look */
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
     display: inline-block; /* Ensure inline elements respect padding and border */
-    transform: translateZ(0); /* Ensure 3D transforms are hardware accelerated */
+    margin-bottom: 1rem; /* Adjust spacing between headings */
 }
