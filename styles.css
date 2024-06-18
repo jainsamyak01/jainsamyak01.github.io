@@ -64,7 +64,7 @@ footer {
 .section h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #fff; /* Ensure heading color is white */
+    color: #fff; /* Default heading color */
 }
 
 .section .container {
@@ -77,5 +77,25 @@ footer {
     color: #ddd; /* Adjust text color */
 }
 
-/* Adjust other styles as needed */
+/* Specific page heading colors */
+.home-page .section h1 {
+    color: #ffc107; /* Dark shade of yellow */
+}
 
+.about-page .section h1 {
+    color: #ffc107; /* Dark shade of yellow */
+}
+
+.projects-page .section h1 {
+    color: #ffc107; /* Dark shade of yellow */
+}
+
+.blog-page .section h1 {
+    color: #ffc107; /* Dark shade of yellow */
+}
+
+.contact-page .section h1 {
+    color: #ffc107; /* Dark shade of yellow */
+}
+
+/* Adjust other styles as needed */
