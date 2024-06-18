@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
     position: relative;
     min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 header {
@@ -18,14 +19,21 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
     margin-right: 1rem;
 }
 
@@ -33,10 +41,17 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    transition: transform 0.3s;
+}
+
+nav ul li a:hover {
+    transform: scale(1.2);
 }
 
 main {
     padding: 2rem;
+    margin-top: 70px; /* Adjust to the height of the header */
+    perspective: 1000px; /* Add perspective for 3D effects */
 }
 
 footer {
@@ -44,12 +59,43 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    position: absolute;
+    position: fixed;
     width: 100%;
     bottom: 0;
 }
 
 .about p {
     margin-bottom: 1.5rem; /* Adjust as needed */
+}
+
+section {
+    padding: 50px;
+    background-color: #f4f4f4;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+section:hover {
+    transform: rotateY(10deg) rotateX(10deg);
+}
+
+/* Swipe Navigation Styles */
+.swipe-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.swipe-section {
+    scroll-snap-align: start;
+    flex: none;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
