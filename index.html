@@ -15,10 +15,8 @@
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#blog">Blog</a></li>
+                <li class="contact-me"><a href="#contact">Contact</a></li>
             </ul>
-            <div class="contact-me">
-                <li><a href="#contact">Contact</a></li>
-            </div>
         </nav>
     </header>
     <main class="swipe-container">
@@ -30,26 +28,26 @@
             </div>
         </section>
         <section id="about" class="swipe-section">
-            <div class="about">
+            <div>
                 <h1>About Me</h1>
                 <p>My name is Samyak Jain, and I am an aspiring data scientist...</p>
             </div>
         </section>
         <section id="projects" class="swipe-section">
-            <div class="projects">
+            <div>
                 <h1>Projects</h1>
                 <p>Check out my projects on <a href="https://github.com/jainsamyak01/Basic-calculator-using-python">GitHub</a>.</p>
                 <p>Clone the repository and run <code>calculator.py</code> in your local Python environment to use the calculator.</p>
             </div>
         </section>
         <section id="blog" class="swipe-section">
-            <div class="blog">
+            <div>
                 <h1>Blog</h1>
                 <p>Read my latest posts on data science and personal growth.</p>
             </div>
         </section>
         <section id="contact" class="swipe-section">
-            <div class="contact">
+            <div>
                 <h1>Contact</h1>
                 <p>Feel free to reach out via email at samyakjain@example.com.</p>
             </div>
@@ -70,15 +68,6 @@
             hammer.on('swiperight', () => {
                 swipeContainer.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
             });
-
-            // Gyroscope tilt effect
-            if (window.DeviceOrientationEvent) {
-                window.addEventListener('deviceorientation', (event) => {
-                    const x = event.gamma; // left-to-right tilt in degrees
-                    const y = event.beta;  // front-to-back tilt in degrees
-                    swipeContainer.style.transform = `rotateY(${x * 0.1}deg) rotateX(${y * 0.1}deg)`;
-                });
-            }
         });
     </script>
 </body>
