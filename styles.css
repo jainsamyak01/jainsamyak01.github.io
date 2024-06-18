@@ -67,7 +67,31 @@ footer {
     margin: 0 auto;
 }
 
-.section .content p {
-    margin-bottom: 1.5rem;
+.section .content .project-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #ccc; /* Border around each project item */
+    border-radius: 8px;
+}
+
+.section .content .project-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333; /* Adjust heading color as needed */
+}
+
+.section .content .project-item p {
+    margin-bottom: 1rem;
     color: #555; /* Adjust paragraph text color */
 }
+
+.section .content .project-item a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section .content .project-item a:hover {
+    text-decoration: underline;
+}
+
