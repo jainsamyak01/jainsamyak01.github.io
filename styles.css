@@ -1,35 +1,36 @@
-/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0; /* Light gray background */
-    color: #333; /* Dark text color */
-    overflow-x: hidden; /* Prevent horizontal scroll on smaller screens */
+    position: relative;
+    min-height: 100vh;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
 }
 
-/* Header styles */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #333; /* Dark background color for header */
+    color: #fff; /* White text color */
     padding: 1rem 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Ensure navigation stays on top */
 }
 
-/* Navigation styles */
 nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center; /* Center align navigation items */
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
+    display: inline;
     margin-right: 1rem;
 }
 
@@ -37,54 +38,48 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    transition: all 0.3s ease; /* Smooth hover effect */
 }
 
-nav ul li a:hover {
-    color: #ffcc00; /* Yellow hover color */
-}
-
-/* Main section styles */
 main {
-    padding: 2rem;
+    padding: 4rem 2rem;
+    margin-top: 5rem; /* Adjust to match header height */
 }
 
-.section {
-    margin-bottom: 2rem;
+.swipe-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
 }
 
-.content {
-    background-color: #fff; /* White background for content */
-    padding: 2rem;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+.swipe-section {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
 }
 
-.content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.content p {
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
-}
-
-.content a {
-    color: #007bff; /* Blue link color */
-}
-
-.content a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
-/* Footer styles */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    position: fixed; /* Fixed to the bottom of the viewport */
+    position: fixed;
     width: 100%;
     bottom: 0;
+    z-index: 1000; /* Ensure footer stays on top */
 }
+
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem;
+    }
+
+    main {
+        padding: 4rem 1rem;
+    }
+}
+
