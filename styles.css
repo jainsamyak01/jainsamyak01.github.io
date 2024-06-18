@@ -108,10 +108,19 @@ section {
 
 @media (max-width: 600px) {
     nav ul {
-        flex-direction: column;
+        flex-direction: row; /* Change flex direction to row for small screens */
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+    }
+
+    nav ul li {
+        flex: 1 0 50%; /* Make each item take 50% of the width */
+        text-align: center; /* Center text inside each item */
     }
 
     .contact-me {
+        width: 100%;
+        display: flex;
+        justify-content: center;
         margin-top: 1rem;
     }
 }
