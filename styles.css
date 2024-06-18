@@ -71,7 +71,6 @@ nav ul li.active::after {
 main {
     padding: 2rem;
     margin-top: 100px; /* Adjust to the height of the header */
-    perspective: 1000px; /* Add perspective for 3D effects */
 }
 
 footer {
@@ -82,62 +81,5 @@ footer {
     position: absolute;
     width: 100%;
     bottom: 0;
-}
-
-section {
-    padding: 50px;
-    background-color: #f4f4f4;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s, box-shadow 0.5s;
-}
-
-.swipe-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-}
-
-.swipe-section {
-    scroll-snap-align: start;
-    flex: none;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.intro, .about, .projects, .blog, .contact {
-    padding: 30px;
-    border: 2px solid #333;
-    border-radius: 15px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.contact-me {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; /* Change flex direction to column for small screens */
-        align-items: center; /* Center items horizontally */
-    }
-
-    nav ul li {
-        margin: 0.5rem 0; /* Adjust spacing for smaller screens */
-    }
-
-    .contact-me {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-top: 1rem;
-    }
 }
 
