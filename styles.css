@@ -9,8 +9,7 @@ body {
     line-height: 1.6;
     position: relative;
     min-height: 100vh;
-    background-color: #121212; /* Dark background color */
-    color: #fff; /* Default text color */
+    background-color: #000; /* Change background color to black */
 }
 
 header {
@@ -35,6 +34,14 @@ nav ul li a {
     padding: 0.5rem 1rem;
 }
 
+nav ul li a:hover {
+    color: #ffeb3b; /* Bright yellow color on hover */
+}
+
+nav ul li a[href="about.html"] {
+    color: #ffeb3b; /* Bright yellow color */
+}
+
 main {
     padding: 2rem;
 }
@@ -50,18 +57,17 @@ footer {
 }
 
 .section {
-    background-color: #333; /* Dark background for 3D box effect */
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1); /* Light shadow for 3D effect */
+    background-color: #222;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* 3D box effect with stronger shadow */
     padding: 2rem;
     margin: 2rem 0;
     border-radius: 8px;
-    color: #fff; /* White text color inside the box */
 }
 
 .section h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #fff; /* White text color */
+    color: #ffeb3b; /* Adjust text color to yellow */
 }
 
 .section .container {
@@ -71,13 +77,7 @@ footer {
 
 .section .content {
     margin-top: 1rem; /* Adjust spacing as needed */
-    color: #ddd; /* Light gray text color */
-}
-
-/* Adjust other styles as needed */
-
-
-    color: #555; /* Adjust text color */
+    color: #ddd; /* Adjust text color */
 }
 
 /* Adjust other styles as needed */
