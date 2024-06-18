@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samyak Jain's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 </head>
 <body>
     <header>
@@ -19,57 +18,23 @@
             </ul>
         </nav>
     </header>
-    <main class="swipe-container">
-        <section id="home" class="swipe-section">
-            <div>
+
+    <main>
+        <section id="home" class="section">
+            <div class="content">
                 <h1>Welcome to My Portfolio</h1>
-                <p>This is the home section.</p>
+                <p>Hello! I'm Samyak Jain, a recent high school graduate with a passion for data science.</p>
+                <p>Explore more about me and my journey into data science through this portfolio.</p>
             </div>
         </section>
-        <section id="about" class="swipe-section">
-            <div>
-                <h1>About Me</h1>
-                <p>My name is Samyak Jain, and I am an aspiring data scientist...</p>
-                <a href="resume.pdf" target="_blank">Download my resume</a>
-            </div>
-        </section>
-        <section id="projects" class="swipe-section">
-            <div>
-                <h1>Projects</h1>
-                <p>Check out my projects on <a href="https://github.com/jainsamyak01/Basic-calculator-using-python">GitHub</a>.</p>
-                <p>Clone the repository and run <code>calculator.py</code> in your local Python environment to use the calculator.</p>
-            </div>
-        </section>
-        <section id="blog" class="swipe-section">
-            <div>
-                <h1>Blog</h1>
-                <p>Read my latest posts on data science and personal growth.</p>
-            </div>
-        </section>
-        <section id="contact" class="swipe-section">
-            <div>
-                <h1>Contact</h1>
-                <p>Feel free to reach out via email at samyakjain@example.com.</p>
-            </div>
-        </section>
+        
+        <!-- Other sections (About Me, Projects, Blog, Contact) will go here -->
+        
     </main>
+
     <footer>
         <p>&copy; 2024 Samyak Jain. All rights reserved.</p>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const swipeContainer = document.querySelector('.swipe-container');
-            const hammer = new Hammer(swipeContainer);
-
-            hammer.on('swipeleft', () => {
-                swipeContainer.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
-            });
-
-            hammer.on('swiperight', () => {
-                swipeContainer.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
-            });
-        });
-    </script>
 </body>
 </html>
 
