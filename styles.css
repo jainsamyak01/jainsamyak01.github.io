@@ -10,6 +10,7 @@ body {
     position: relative;
     min-height: 100vh;
     background-color: #000; /* Change background color to black */
+    color: #fff; /* Change text color to white */
 }
 
 header {
@@ -35,11 +36,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffeb3b; /* Bright yellow color on hover */
+    color: #ffc107; /* Dark shade of yellow on hover */
 }
 
 nav ul li a[href="about.html"] {
-    color: #ffeb3b; /* Bright yellow color */
+    color: #ffc107; /* Dark shade of yellow */
 }
 
 main {
@@ -67,7 +68,7 @@ footer {
 .section h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #ffeb3b; /* Adjust text color to yellow */
+    color: #ffc107; /* Adjust text color to dark shade of yellow */
 }
 
 .section .container {
@@ -81,4 +82,5 @@ footer {
 }
 
 /* Adjust other styles as needed */
+
 
