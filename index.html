@@ -15,7 +15,9 @@
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <div class="contact-me">
+                    <li><a href="#contact">Contact</a></li>
+                </div>
             </ul>
         </nav>
     </header>
@@ -68,10 +70,20 @@
             hammer.on('swiperight', () => {
                 swipeContainer.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
             });
+
+            // Gyroscope tilt effect
+            if (window.DeviceOrientationEvent) {
+                window.addEventListener('deviceorientation', (event) => {
+                    const x = event.gamma; // left-to-right tilt in degrees
+                    const y = event.beta;  // front-to-back tilt in degrees
+                    swipeContainer.style.transform = `rotateY(${x * 0.1}deg) rotateX(${y * 0.1}deg)`;
+                });
+            }
         });
     </script>
 </body>
 </html>
+
 
 
 
