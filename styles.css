@@ -1,5 +1,4 @@
-/* styles.css */
-
+/* Reset and basic styles */
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +11,7 @@ body {
     position: relative;
     min-height: 100vh;
     overflow-x: hidden; /* Prevent horizontal scroll */
+    background-color: #fff; /* Set background color to white */
 }
 
 header {
@@ -27,14 +27,13 @@ header {
 
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center navigation items */
 }
 
 nav ul li {
-    margin-right: 1rem;
+    margin: 0 1rem; /* Adjust horizontal spacing */
+    position: relative; /* Enable position for dot */
 }
 
 nav ul li a {
@@ -44,14 +43,34 @@ nav ul li a {
     transition: transform 0.3s;
 }
 
-nav ul li a:hover {
-    transform: scale(1.2);
+/* Styling for Contact link */
+nav .contact-me a {
+    color: #fff; /* Set text color to white */
+}
+
+/* Dot indicator */
+nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Adjust to position dot */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0; /* Hide dot by default */
+    transition: opacity 0.3s;
+}
+
+/* Show dot when link is active */
+nav ul li.active::after {
+    opacity: 1;
 }
 
 main {
     padding: 2rem;
-    margin-top: 70px; /* Adjust to the height of the header */
-    perspective: 1000px; /* Add perspective for 3D effects */
+    margin-top: 100px; /* Adjust to the height of the header */
 }
 
 footer {
@@ -59,43 +78,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    position: fixed;
+    position: absolute;
     width: 100%;
     bottom: 0;
 }
-
-.about p {
-    margin-bottom: 1.5rem; /* Adjust as needed */
-}
-
-section {
-    padding: 50px;
-    background-color: #f4f4f4;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-}
-
-section:hover {
-    transform: rotateY(10deg) rotateX(10deg);
-}
-
-/* Swipe Navigation Styles */
-.swipe-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-}
-
-.swipe-section {
-    scroll-snap-align: start;
-    flex: none;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
