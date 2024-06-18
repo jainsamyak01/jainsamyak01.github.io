@@ -8,10 +8,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    position: relative;
-    min-height: 100vh;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    background-color: #fff; /* Set background color to white */
+    background-color: #f0f0f0; /* Light gray background */
 }
 
 header {
@@ -28,12 +25,12 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center; /* Center navigation items */
+    justify-content: center;
 }
 
 nav ul li {
-    margin: 0 1rem; /* Adjust horizontal spacing */
-    position: relative; /* Enable position for dot */
+    margin: 0 1rem;
+    position: relative;
 }
 
 nav ul li a {
@@ -43,34 +40,18 @@ nav ul li a {
     transition: transform 0.3s;
 }
 
-/* Styling for Contact link */
-nav .contact-me a {
-    color: #fff; /* Set text color to white */
-}
-
-/* Dot indicator */
-nav ul li::after {
-    content: '';
-    position: absolute;
-    bottom: -10px; /* Adjust to position dot */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 8px;
-    height: 8px;
-    background-color: #fff;
-    border-radius: 50%;
-    opacity: 0; /* Hide dot by default */
-    transition: opacity 0.3s;
-}
-
-/* Show dot when link is active */
-nav ul li.active::after {
-    opacity: 1;
-}
-
 main {
-    padding: 2rem;
-    margin-top: 100px; /* Adjust to the height of the header */
+    padding-top: 100px; /* Adjust to the height of the header */
+}
+
+.section {
+    padding: 4rem 2rem; /* Adjust padding as needed */
+    text-align: center;
+}
+
+.section .content {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 footer {
