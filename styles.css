@@ -1,5 +1,4 @@
-/* styles.css */
-
+/* Reset and basic styles */
 * {
     margin: 0;
     padding: 0;
@@ -26,14 +25,10 @@ header {
     z-index: 1000;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between; /* Ensure nav items are spaced out */
-}
-
 nav ul {
     list-style: none;
     display: flex;
+    justify-content: center; /* Center navigation items */
 }
 
 nav ul li {
@@ -89,10 +84,6 @@ footer {
     bottom: 0;
 }
 
-.about p {
-    margin-bottom: 1.5rem; /* Adjust as needed */
-}
-
 section {
     padding: 50px;
     background-color: #f4f4f4;
@@ -127,7 +118,6 @@ section {
 }
 
 .contact-me {
-    width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 1rem;
@@ -150,3 +140,4 @@ section {
         margin-top: 1rem;
     }
 }
+
