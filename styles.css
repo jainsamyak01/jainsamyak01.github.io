@@ -48,7 +48,25 @@ footer {
     bottom: 0;
 }
 
-
 .about p {
     margin-bottom: 1.5rem; /* Adjust as needed */
+    border: 1px solid #ccc; /* Border style */
+    padding: 1rem; /* Padding inside the rectangle */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transform: translateZ(0); /* Ensure 3D transforms are hardware accelerated */
+}
+
+.about h1,
+.about h2,
+.about h3,
+.about h4,
+.about h5,
+.about h6 {
+    border: 1px solid #ccc; /* Border style */
+    padding: 0.5rem 1rem; /* Padding inside the rectangle */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    display: inline-block; /* Ensure inline elements respect padding and border */
+    transform: translateZ(0); /* Ensure 3D transforms are hardware accelerated */
 }
