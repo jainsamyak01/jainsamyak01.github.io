@@ -34,13 +34,11 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
 }
 
 nav ul li {
-    margin: 0.5rem 1rem; /* Adjust horizontal spacing */
+    margin: 0 1rem; /* Adjust horizontal spacing */
+    position: relative; /* Enable position for dot */
 }
 
 nav ul li a {
@@ -53,6 +51,26 @@ nav ul li a {
 /* Styling for Contact link */
 nav .contact-me a {
     color: #fff; /* Set text color to white */
+}
+
+/* Dot indicator */
+nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Adjust to position dot */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0; /* Hide dot by default */
+    transition: opacity 0.3s;
+}
+
+/* Show dot when link is active */
+nav ul li.active::after {
+    opacity: 1;
 }
 
 main {
