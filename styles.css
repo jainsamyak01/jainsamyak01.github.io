@@ -12,6 +12,7 @@ body {
     position: relative;
     min-height: 100vh;
     overflow-x: hidden; /* Prevent horizontal scroll */
+    background-color: #000; /* Set background color to black */
 }
 
 header {
@@ -25,14 +26,17 @@ header {
     z-index: 1000;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between; /* Ensure nav items are spaced out */
+}
+
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
 }
 
 nav ul li {
@@ -44,6 +48,11 @@ nav ul li a {
     text-decoration: none;
     padding: 0.5rem 1rem;
     transition: transform 0.3s;
+}
+
+/* Styling for Contact link */
+nav .contact-me a {
+    color: #fff; /* Set text color to white */
 }
 
 main {
@@ -106,15 +115,14 @@ section {
     margin-top: 1rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     nav ul {
-        flex-direction: row; /* Change flex direction to row for small screens */
-        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        flex-direction: column; /* Change flex direction to column for small screens */
+        align-items: center; /* Center items horizontally */
     }
 
     nav ul li {
-        flex: 1 0 50%; /* Make each item take 50% of the width */
-        text-align: center; /* Center text inside each item */
+        margin: 0.5rem 0; /* Adjust spacing for smaller screens */
     }
 
     .contact-me {
