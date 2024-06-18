@@ -9,7 +9,7 @@ body {
     line-height: 1.6;
     position: relative;
     min-height: 100vh;
-    background-color: #f0f0f0; /* Light background color for the body */
+    background-color: #f0f0f0; /* Change background color as desired */
 }
 
 header {
@@ -36,7 +36,6 @@ nav ul li a {
 
 main {
     padding: 2rem;
-    margin-bottom: 100px; /* Ensure space at the bottom to accommodate the footer */
 }
 
 footer {
@@ -50,23 +49,25 @@ footer {
 }
 
 .section {
-    background-color: #fff; /* White background for the section */
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 1.5rem; /* Padding inside the section */
-    margin-bottom: 1.5rem; /* Space between sections */
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* 3D box effect */
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
 }
 
 .section h1 {
-    background-color: #333; /* Dark background for headings */
-    color: #fff; /* White text */
-    padding: 0.5rem 1rem; /* Padding inside headings */
-    border-radius: 4px; /* Slightly rounded corners */
-    margin-bottom: 1rem; /* Space below headings */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333; /* Adjust text color as needed */
 }
 
-.section p {
-    margin-bottom: 1rem; /* Space between paragraphs */
+.section .container {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
+.section .content p {
+    margin-bottom: 1.5rem;
+    color: #555; /* Adjust paragraph text color */
+}
