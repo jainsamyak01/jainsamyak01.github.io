@@ -30,12 +30,13 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column; /* Arrange items in a column */
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 }
 
 nav ul li {
-    margin: 0.5rem 0; /* Space items vertically */
+    margin: 0.5rem 1rem; /* Adjust horizontal spacing */
 }
 
 nav ul li a {
@@ -43,10 +44,6 @@ nav ul li a {
     text-decoration: none;
     padding: 0.5rem 1rem;
     transition: transform 0.3s;
-}
-
-nav ul li a:hover {
-    transform: scale(1.2);
 }
 
 main {
@@ -75,13 +72,7 @@ section {
     margin: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform-style: preserve-3d;
     transition: transform 0.5s, box-shadow 0.5s;
-}
-
-section:hover {
-    transform: rotateY(20deg) rotateX(10deg);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .swipe-container {
@@ -106,11 +97,21 @@ section:hover {
     border-radius: 15px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform-style: preserve-3d;
 }
 
-.intro:hover, .about:hover, .projects:hover, .blog:hover, .contact:hover {
-    transform: rotateY(10deg) rotateX(5deg);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.contact-me {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .contact-me {
+        margin-top: 1rem;
+    }
+}
