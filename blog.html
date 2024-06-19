@@ -8,18 +8,15 @@
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <p>&copy; 2024 Samyak Jain. All rights reserved.</p>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="blog.html" class="active">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section class="section">
@@ -30,8 +27,22 @@
     <footer>
         <p>&copy; 2024 Samyak Jain. All rights reserved.</p>
     </footer>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const href = this.getAttribute('href');
+                const offsetTop = document.querySelector(href).offsetTop;
+
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
-
 
