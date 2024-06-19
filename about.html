@@ -8,18 +8,15 @@
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <p>&copy; 2024 Samyak Jain. All rights reserved.</p>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About Me</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section class="section">
@@ -29,10 +26,28 @@
             <p>Recently, I developed a basic calculator application using Python. This project, while simple, has given me practical experience with Python programming and a better understanding of fundamental concepts such as functions and user input handling. You can check out the project <a href="projects.html">here</a>.</p>
             <p>In my spare time, I enjoy watching Formula 1 races, which inspire me with their precision, strategy, and technological innovation. As I progress through my studies and gain more experience, I plan to add various projects to this portfolio to showcase my growth and expertise.</p>
             <p>Although I am just starting out and don't have many projects to display at the moment, I am eager to learn and create impactful work that will soon fill this space. Stay tuned for updates as I develop my skills and undertake new challenges in the world of data science.</p>
-         </section>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 Samyak Jain. All rights reserved.</p>
     </footer>
+    <script>
+        // Basic slide functionality for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const href = this.getAttribute('href');
+                const target = document.querySelector(href);
+
+                window.scrollTo({
+                    top: target.offsetTop,
+                    behavior: 'smooth'
+                });
+
+                history.pushState(null, null, href);
+            });
+        });
+    </script>
 </body>
 </html>
