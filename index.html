@@ -28,6 +28,18 @@
     <footer>
         <p>&copy; 2024 Samyak Jain. All rights reserved.</p>
     </footer>
+    <script>
+        // Basic slide functionality for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const href = this.getAttribute('href');
+                window.location.href = href;
+
+                history.pushState(null, null, href);
+            });
+        });
+    </script>
 </body>
 </html>
-
