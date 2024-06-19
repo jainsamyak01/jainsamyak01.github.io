@@ -14,10 +14,12 @@ body {
     color: #fff; /* Text color to white */
 }
 
-.header-content {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for header */
-    padding: 1rem;
-    text-align: center;
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 1000; /* Ensure it stays above other elements */
 }
 
 nav ul {
@@ -46,7 +48,8 @@ nav ul li a.active {
 
 main {
     padding: 2rem;
-    padding-bottom: 6rem; /* Add space for footer navigation */
+    padding-top: 6rem; /* Add space for fixed header */
+    padding-bottom: 6rem; /* Add space for footer */
 }
 
 footer {
@@ -57,29 +60,6 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-}
-
-footer nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-footer nav ul li {
-    margin-right: 1rem;
-}
-
-footer nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-}
-
-footer nav ul li a:hover,
-footer nav ul li a.active {
-    color: #ffc107; /* Dark shade of yellow for active and hover states */
 }
 
 .section {
@@ -96,28 +76,6 @@ footer nav ul li a.active {
     color: #ffc107; /* Dark shade of yellow for headings */
 }
 
-.section .container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.section .content {
-    margin-top: 1rem; /* Adjust spacing as needed */
-    color: #ddd; /* Adjust text color */
-}
-
-/* Specific page heading colors */
-.home-page .section h1 {
-    color: #ffc107; /* Dark shade of yellow for home page */
-}
-
-.about-page .section h1,
-.projects-page .section h1,
-.blog-page .section h1,
-.contact-page .section h1 {
-    color: #ffc107; /* Dark shade of yellow for other pages */
-}
-
 a {
     color: #ffc107; /* Default link color */
     text-decoration: none;
@@ -127,17 +85,4 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Header at the top of the page */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    z-index: 1000; /* Ensure it stays above other elements */
-}
-
-/* Padding to avoid content being under the fixed header */
-main {
-    padding-top: 3rem; /* Adjust according to header height */
-}
 
