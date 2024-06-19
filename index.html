@@ -10,36 +10,74 @@
     <header>
         <nav>
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="section">
+        <section id="home" class="section">
             <h1>Welcome to My Portfolio</h1>
             <p>Hello! I'm Samyak Jain, a recent high school graduate with a passion for data science. I will be pursuing a Bachelor of Business Administration (BBA) at IILM University, Gurugram.</p>
-            <p>Explore more about me and my journey into data science on my <a href="about.html">About Me</a> page.</p>
+            <p>Explore more about me and my journey into data science on my <a href="#about">About Me</a> page.</p>
+        </section>
+        <section id="about" class="section">
+            <h1>About Me</h1>
+            <p>Hello! I'm Samyak Jain, a recent high school graduate who is about to embark on an exciting academic journey by pursuing a Bachelor of Business Administration (BBA) at IILM University, Gurugram. With a keen interest in data science, I am dedicated to building a strong foundation in statistics and programming languages, which are essential for a successful career in data analysis.</p>
+            <p>My goal is to become a proficient data scientist, capable of analyzing complex data sets and predicting trends that can drive business growth. I am committed to working hard and continuously learning new skills that are in demand in the ever-evolving field of data science.</p>
+            <p>Recently, I developed a basic calculator application using Python. This project, while simple, has given me practical experience with Python programming and a better understanding of fundamental concepts such as functions and user input handling. You can check out the project <a href="#projects">here</a>.</p>
+            <p>In my spare time, I enjoy watching Formula 1 races, which inspire me with their precision, strategy, and technological innovation. As I progress through my studies and gain more experience, I plan to add various projects to this portfolio to showcase my growth and expertise.</p>
+            <p>Although I am just starting out and don't have many projects to display at the moment, I am eager to learn and create impactful work that will soon fill this space. Stay tuned for updates as I develop my skills and undertake new challenges in the world of data science.</p>
+        </section>
+        <section id="projects" class="section">
+            <h1>Projects</h1>
+            <div class="project-item">
+                <h2>Basic Calculator using Python</h2>
+                <p>A simple calculator program developed in Python.</p>
+                <p>You can view the code on GitHub:</p>
+                <a href="https://github.com/jainsamyak01/Basic-calculator-using-python" target="_blank">View Calculator on GitHub</a>
+                <p>To use the calculator:</p>
+                <p>Clone the repository and run <code>calculator.py</code> in your local Python environment.</p>
+            </div>
+            <!-- Add more project items as needed -->
+        </section>
+        <section id="blog" class="section">
+            <h1>Blog</h1>
+            <p>Welcome to my blog! Here, I share my thoughts and experiences related to data science and other topics of interest.</p>
+        </section>
+        <section id="contact" class="section">
+            <h1>Contact</h1>
+            <p>If you would like to get in touch, please reach out to me through the following channels:</p>
+            <p>Email: <a href="mailto:samyakjainskj@gmail.com">samyakjainskj@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/samyak-jain-20475a246" target="_blank">samyak-jain-20475a246</a></p>
+            <p>GitHub: <a href="https://github.com/jainsamyak01" target="_blank">jainsamyak01</a></p>
+            <p>X/Twitter: <a href="https://x.com/samyakkkkjain" target="_blank">samyakkkkjain</a></p>
+            <p>Instagram: <a href="https://instagram.com/samyakkkkjain" target="_blank">samyakkkkjain</a></p>
+            <p>Reddit: <a href="https://www.reddit.com/u/yoo_its_samy" target="_blank">u/yoo_its_samy</a></p>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Samyak Jain. All rights reserved.</p>
     </footer>
     <script>
-        // Basic slide functionality for navigation
+        // Smooth scrolling for navigation links
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
 
                 const href = this.getAttribute('href');
-                window.location.href = href;
+                const offsetTop = document.querySelector(href).offsetTop;
 
-                history.pushState(null, null, href);
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
             });
         });
     </script>
 </body>
 </html>
+
