@@ -9,8 +9,39 @@ body {
     line-height: 1.6;
     position: relative;
     min-height: 100vh;
-    background-color: #000; /* Background color to black */
+    background: url('your-background-image.jpg') no-repeat center center fixed; /* Add your background image here */
+    background-size: cover;
     color: #fff; /* Text color to white */
+}
+
+.header-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for header */
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for navigation */
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #ffc107; /* Dark shade of yellow for active and hover states */
 }
 
 main {
@@ -19,7 +50,7 @@ main {
 }
 
 footer {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for footer */
     color: #fff;
     text-align: center;
     padding: 1rem 0;
@@ -48,12 +79,12 @@ footer nav ul li a {
 
 footer nav ul li a:hover,
 footer nav ul li a.active {
-    color: #ffc107; /* Dark shade of yellow */
+    color: #ffc107; /* Dark shade of yellow for active and hover states */
 }
 
 .section {
-    background-color: #222;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* 3D box effect with stronger shadow */
+    background-color: rgba(34, 34, 34, 0.8); /* Semi-transparent black for 3D box effect */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow */
     padding: 2rem;
     margin: 2rem 0;
     border-radius: 8px;
@@ -87,8 +118,6 @@ footer nav ul li a.active {
     color: #ffc107; /* Dark shade of yellow for other pages */
 }
 
-/* Adjust other styles as needed */
-
 a {
     color: #ffc107; /* Default link color */
     text-decoration: none;
@@ -97,3 +126,18 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* Header at the top of the page */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Padding to avoid content being under the fixed header */
+main {
+    padding-top: 3rem; /* Adjust according to header height */
+}
+
